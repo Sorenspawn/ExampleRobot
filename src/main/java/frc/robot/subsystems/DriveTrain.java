@@ -12,26 +12,26 @@ import com.ctre.phoenix.motorcontrol.can.TalonSRX;
 import com.ctre.phoenix.motorcontrol.can.VictorSPX;
 
 import edu.wpi.first.wpilibj.command.Subsystem;
+import frc.robot.RobotMap;
 
 /**
  * Add your docs here.
  */
 public class DriveTrain extends Subsystem {
-  // Put methods for controlling this subsystem
-  // here. Call these from Commands.
-  TalonSRX rightMotor1;
-  VictorSPX rightMotor2;
-  TalonSRX leftMotor1;
-  VictorSPX leftMotor2;
+  
+  private TalonSRX rightMotor1;
+  private VictorSPX rightMotor2;
+  private TalonSRX leftMotor1;
+  private VictorSPX leftMotor2;
 
   private double leftSpeed;
   private double rightSpeed;
 
   public DriveTrain(){
-    rightMotor1 = new TalonSRX(1);
-    rightMotor2 = new VictorSPX(2);
-    leftMotor1 = new TalonSRX(30);
-    leftMotor2 = new VictorSPX(4);
+    rightMotor1 = new TalonSRX(RobotMap.MOTOR_RIGHT_1_ID);
+    rightMotor2 = new VictorSPX(RobotMap.MOTOR_RIGHT_2_ID);
+    leftMotor1 = new TalonSRX(RobotMap.MOTOR_LEFT_1_ID);
+    leftMotor2 = new VictorSPX(RobotMap.MOTOR_LEFT_2_ID);
   }
 
   public void tankDrive(double left, double right){
