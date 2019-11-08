@@ -18,4 +18,8 @@ public class RobotMap {
 	public static final int MOTOR_RIGHT_2_ID = 2;
 	public static final int MOTOR_LEFT_1_ID = 3;
 	public static final int MOTOR_LEFT_2_ID = 4;
+
+	public static final int LEFT_STICK_Y = 1;
+	public static final int RIGHT_STICK_X =5;
+	public static final int DRIVER_CONTROLLER = 0;
 }

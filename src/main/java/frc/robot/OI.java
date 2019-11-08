@@ -7,11 +7,20 @@
 
 package frc.robot;
 
+import java.lang.ModuleLayer.Controller;
+
+import edu.wpi.first.wpilibj.Joystick;
+
 /**
  * This class is the glue that binds the controls on the physical operator
  * interface to the commands and command groups that allow control of the robot.
  */
 public class OI {
+
+  Joystick stick = new Joystick(RobotMap.DRIVER_CONTROLLER);
+  public double GetDriverRawAxis(int axis){
+    return stick.getRawAxis(axis);
+  }
   //// CREATING BUTTONS
   // One type of button is a joystick button which is any button on a
   //// joystick.

@@ -24,7 +24,7 @@ import frc.robot.subsystems.DriveTrain;
 public class Robot extends TimedRobot {
   public int x = 0;
   public static OI m_oi;
-  public static DriveTrain drivetrain;
+  public static DriveTrain driveTrain = new DriveTrain();
 
   Command m_autonomousCommand;
 
@@ -34,7 +34,7 @@ public class Robot extends TimedRobot {
    */
   @Override
   public void robotInit() {
-    drivetrain = new DriveTrain();
+    driveTrain = new DriveTrain();
     m_oi = new OI();
     SmartDashboard.setDefaultNumber("myx", 0);
     m_autonomousCommand.start();
